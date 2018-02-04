@@ -1,0 +1,82 @@
+html {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+/* HEADER Section */
+/* Header - Left Side */
+.header-container {
+  height: 4rem;
+  width: 100%;
+  background-color: #008b8b;
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  /*position: fixed;*/
+}
+
+.header-left {
+  font-family: "Faster One", sans-serif;
+  font-size: 2rem;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-left img {
+  width: auto;
+  height: 2rem;
+  padding-left: 1.5rem;
+}
+
+.colmar-text {
+  color: #000;
+  padding-left: 1rem;
+}
+
+.academy-text {
+  color: #E89B00;
+  padding-left: 1rem;
+}
+
+/* Header - Right Side */
+
+nav {
+  font-size: 1.125rem;
+  font-weight: bolder;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1.5rem;
+}
+
+nav a {
+  padding-left: 1rem;
+}
+
+/* BODY Section */
+
+.body-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+/* Body - Top Container */
+
+.body-container.top {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.top-right {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
