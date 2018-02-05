@@ -10,11 +10,14 @@ html {
   width: 100%;
   background-color: #008b8b;
 
+  display: block;
+  position: fixed;
+  z-index: 5;
+
   display: flex;
   justify-content: space-between;
   align-content: center;
 
-  /*position: fixed;*/
 }
 
 .header-left {
@@ -62,6 +65,15 @@ nav a {
 /* BODY Section */
 
 .body-container {
+  width: 100%;
+  top: 2.75rem;  /* 2rem is touching bottom of header */
+
+  display: block;
+  position: absolute;
+  z-index: 1;
+
+  background-color: rgba(60, 170, 170, 0.2);
+
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -70,13 +82,44 @@ nav a {
 /* Body - Top Container */
 
 .body-container.top {
+  width: auto;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  padding: 0;
   display: flex;
   flex-flow: row;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.body-container.top img {
+  width: 60%;
+  height: auto;
+  padding: 1.5rem 0 1.5rem 1.5rem;  /* Used the same padding around; not as in mock-up */
+}
+
+.top-center {
+  width: 2%;
 }
 
 .top-right {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
+  padding-right: 1.5rem;
+}
+
+.top-right.top {
+  font-size: 2rem;
+  font-weight: 900;
+  padding-bottom: 2rem;
+}
+
+.top-right.middle {
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding-bottom: 2rem;
+}
+
+.top-right.bottom {
+  align-self: center;
 }
