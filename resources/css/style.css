@@ -98,12 +98,13 @@ nav a {
 /* BODY Section */
 .body-container {
   width: 100%;
-  top: 2.75rem;  /* 2rem is touching bottom of header */
-  display: block;
+  margin-top: 5.5rem;  /* 1.5rem under header */
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+
+  /*display: block;*/
   position: absolute;
   z-index: 1;
-
-  background-color: rgba(60, 170, 170, 0.2);
 
   display: flex;
   flex-flow: column;
@@ -111,50 +112,91 @@ nav a {
 }
 
 /* 1st (from top) Main Container */
-.body-container.main-1st,
-.body-container.main-2nd {
+.main-1st-cont,
+.main-2nd-cont {
   width: auto;        /* browser will calculate and select a width */
   min-width: 48rem;   /* not narrower than 768px (tablet width in portrait) */
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding: 0;
+  margin-bottom: 1.5rem;
+
+  background-color: rgba(60, 170, 170, 0.2);
   display: flex;
   flex-flow: row;
   /*justify-content: space-between;*/
 }
 
-.body-container.main-1st img {
+.main-1st-cont img,
+.main-2nd-cont-left img {
   width: 60%;
   height: auto;
   padding: 1.5rem 0 1.5rem 1.5rem;  /* Used the same padding around; not as in mock-up */
 }
 
-.main-1st-right {
+.main-1st-cont-right {
   display: flex;
   flex-flow: column;
+  justify-content: center;
   align-items: flex-start;
+
   padding-left: 1.5rem;
 }
 
-.main-1st-right.top {
+.main-1st-cont-right.top,
+.main-2nd-cont-left.headline {
   font-size: 2rem;
   font-weight: 900;
   padding-bottom: 2rem;
 }
 
-.main-1st-right.middle {
+.main-1st-cont-right.middle {
   font-size: 1.25rem;
   font-weight: normal;
   padding-bottom: 2rem;
 }
 
-/*.main-1st-right.bottom {
-  align-self: center;
-}*/
-
 /* 2nd (from top) Main Container */
-.body-container.main-2nd-left {
+/* Left side of container */
+.main-2nd-cont-left.headline {
+  padding-left: 1.5rem;
   width: 60%;
+}
+
+.main-2nd-cont-left.quote {
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 60%;
+  font-size: 1rem;
+}
+
+.main-2nd-cont-left.author {
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+  font-size: 0.75rem;
+}
+
+.main-2nd-cont-left.author a {
+  color: blue;
+}
+
+/* Right side of container */
+.main-2nd-cont-right {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-2nd-cont-right.top img,
+.main-2nd-cont-right.middle img,
+.main-2nd-cont-right.bottom img {
+  width: 40%;
   height: auto;
-  padding: 2rem 1.5rem;
+}
+
+.main-2nd-cont-right.top,
+.main-2nd-cont-right.middle,
+.main-2nd-cont-right.bottom {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
