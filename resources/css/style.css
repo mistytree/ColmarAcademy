@@ -79,7 +79,7 @@ html {
 }
 
 /* Header - Right Side */
-nav {
+header nav {
   font-size: 1.125rem;
   font-weight: bolder;
   display: flex;
@@ -90,12 +90,12 @@ nav {
   padding-left: 3rem;  /* Keep gap between left and right side of header 3+1rem (64px) minimum */
 }
 
-nav a {
+header nav a {
   padding-left: 1rem;
   transition: font-size 100ms 100ms;
 }
 
-nav a:hover {
+header nav a:hover {
   font-size: 1.25rem;
 }
 
@@ -173,7 +173,7 @@ nav a:hover {
   padding-bottom: 1.5rem;
 }
 
-.mc2-left.quote {
+.quote {
   padding-bottom: 1.5rem;
   font-size: 1rem;
 }
@@ -316,14 +316,14 @@ a {
 
 /* Left side of 4th container */
 video {
-  width: 480px;
+  width: 35.7rem;  /* 571.2px or (1,024 - 3x24px) x 0.6 */
   height: auto;
+  padding-bottom: 1.5rem;
 }
 
 .main-cont-4th-left {
   width: 60%;
   padding-left: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 /* Right side of 4th container */
@@ -342,11 +342,45 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.main-cont-4th .heading,
+.main-cont-4th .short-text {
+  padding-bottom: 1rem;
+}
+
 .mc4-right.top,
 .mc4-right.bottom {
-
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
   align-items: center;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 4rem;
+  background-color: #008b8b;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+
+  white-space: nowrap;
+}
+
+.footer.left {
+  padding-left: 1.5rem;
+}
+
+.footer.right {
+  padding: 0 1.5rem;
+}
+
+.footer.right span {
+  width: 1.5rem;
+}
+
+.privacy {
+  padding-left: 1.5rem;
 }

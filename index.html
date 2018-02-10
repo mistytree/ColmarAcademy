@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>Colmar Academy</title>
@@ -12,7 +13,6 @@
   <body>
 
     <header>
-
       <div class="header-container">
         <div class="header-left">
           <img src="./resources/img/ic-logo.svg" alt="Colmar Academy Header Logo">
@@ -31,11 +31,9 @@
             <a href="#">Sign in</a>
         </nav>
       </div>
-
     </header>
 
     <body>
-
       <!-- Body Container -->
       <div class="body-container">
 
@@ -46,14 +44,14 @@
 
           <div class="main-cont-1st-right">
             <div class="mc1-right top">
-              <h2>Learn something new everyday</h2>
+              <h2 aria-level="1">Learn something new everyday</h2>
             </div>
             <div class="mc1-right middle">
               <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
             </div>
             <div class="mc1-right bottom">
               <!-- Always wrap <span> in <a> tag not <a> in <span>!!! -->
-              <a href="#"><span class="button">Start Here</span></a>
+              <a href="#"><span class="button" role="button">Start Here</span></a>
             </div>
           </div>
 
@@ -65,18 +63,18 @@
           <div class="main-cont-2nd-left">
 
             <img src="./resources/img/information-main.jpg" alt="Bearded young black man reading outdoor">
-            <div class="mc2-left headline">
+            <div class="mc2-left headline" aria-level="1">
               <h2>It doesn't hurt to keep practicing</h2>
             </div>
 
-            <div class="mc2-left quote">
+            <div class="quote">
               <p>"Nam illud quidem adduci vix possum, ut ea, quae senserit ille, tibi non vera videantur.
                 Praeterea et appetendi et refugiendi et omnino rerum gerendarum initia proficiscuntur aut a
                 voluptate aut a dolore."</p>
             </div>
 
             <div class="mc2-left author">
-              <h6>Emanuel, Sr Strategist at <a href="#">Hiring.com</a></h6>
+              <h6 aria-label="author">Emanuel, Sr Strategist at <a href="#">Hiring.com</a></h6>
             </div>
 
           </div>
@@ -86,7 +84,7 @@
             <div class="mc2-right top">
               <img src="./resources/img/information-orientation.jpg" alt="Students walking on sidewalk">
               <div class="mc2-right-text-section">
-                <div class="heading">
+                <div class="heading" aria-level="2">
                   <span>Orientation date</span>
                 </div>
                 <div class="short-text">
@@ -101,7 +99,7 @@
             <div class="mc2-right middle">
               <img src="./resources/img/information-campus.jpg" alt="Classroom with wall map of South America">
               <div class="mc2-right-text-section">
-                <div class="heading">
+                <div class="heading" aria-level="2">
                   <span>Our Campus</span>
                 </div>
                 <div class="short-text">
@@ -116,7 +114,7 @@
             <div class="mc2-right bottom">
               <img src="./resources/img/information-guest-lecture.jpg" alt="Headshot of bearded senior man wearing glasses">
               <div class="mc2-right-text-section">
-                <div class="heading">
+                <div class="heading" aria-level="2">
                   <span>Our guest lecture</span>
                 </div>
                 <div class="short-text">
@@ -135,7 +133,7 @@
         <!-- 3rd (from top) Main Container -->
         <div class="main-cont-3rd">
 
-          <div class="main-cont-3rd-header">
+          <div class="main-cont-3rd-header" aria-level="1">
             <span>Start Learning</span>
           </div>
 
@@ -143,7 +141,7 @@
           <div class="main-cont-3rd-first-row">
             <div class="mc3-1r-left">
               <img src="./resources/img/course-software.jpg" alt="Computer screens in a dark room">
-              <div class="heading">
+              <div class="heading" aria-level="2">
                 <span>Software Engineering</span>
               </div>
               <div class="short-text">
@@ -155,7 +153,7 @@
             </div>
             <div class="mc3-1r-middle">
               <img src="./resources/img/course-computer-art.jpg" alt="Close-up with hand holding cell phone">
-              <div class="heading">
+              <div class="heading" aria-level="2">
                 <span>Computer Art</span>
               </div>
               <div class="short-text">
@@ -168,7 +166,7 @@
             </div>
             <div class="mc3-1r-right">
               <img src="./resources/img/course-design.jpg" alt="Person taking photo outdoor with vintage camera">
-              <div class="heading">
+              <div class="heading" aria-level="2">
                 <span>Desing</span>
               </div>
               <div class="short-text">
@@ -184,7 +182,7 @@
           <div class="main-cont-3rd-second-row">
             <div class="mc3-2r-left">
               <img src="./resources/img/course-data.jpg" alt="Computer screens in a dark room">
-              <div class="heading">
+              <div class="heading" aria-level="2">
                 <span>Data</span>
               </div>
               <div class="short-text">
@@ -196,7 +194,7 @@
             </div>
             <div class="mc3-2r-middle">
               <img src="./resources/img/course-business.jpg" alt="Computer screens in a dark room">
-              <div class="heading">
+              <div class="heading" aria-level="2">
                 <span>Business</span>
               </div>
               <div class="short-text">
@@ -208,7 +206,7 @@
             </div>
             <div class="mc3-2r-right">
               <img src="./resources/img/course-marketing.jpg" alt="Computer screens in a dark room">
-              <div class="heading">
+              <div class="heading" aria-level="2">
                 <span>Marketing</span>
               </div>
               <div class="short-text">
@@ -225,7 +223,7 @@
         <!-- 4th (from top) Main Container -->
         <div class="main-cont-4th">
 
-          <div class="main-cont-4th-header">
+          <div class="main-cont-4th-header" aria-level="1">
             <span>Thesis Exhibit</span>
           </div>
 
@@ -233,13 +231,13 @@
 
             <div class="main-cont-4th-left">
 
-              <video src="./resources/videos/thesis.mp4"></video>
+              <video src="./resources/videos/thesis.mp4" autoplay controls loop muted></video>
 
-              <div class="mc4-left headline">
+              <div class="heading" aria-level="2">
                 <h2>Reimagine Urban</h2>
               </div>
 
-              <div class="mc4-left quote">
+              <div class="quote">
                 <p>"Quid, quod homines infima fortuna, nulla spe rerum gerendarum,
                   opifices denique delectantur historia? Si enim ita est, vide ne facinus facias,
                   cum mori suadeas. Nam si amitti vita beata potest, beata esse non potest."</p>
@@ -251,7 +249,7 @@
               <div class="mc4-right top">
                 <img src="./resources/img/thesis-fisma.jpg" alt="Desk with hand drawing and cell phone">
                 <div class="mc4-right-text-section">
-                  <div class="heading">
+                  <div class="heading" aria-level="2">
                     <span>Fisma: Design and Prototype</span>
                   </div>
                   <div class="short-text">
@@ -263,7 +261,7 @@
               <div class="mc4-right bottom">
                 <img src="./resources/img/thesis-now-and-then.jpg" alt="Landscape photo of city high-rise buildings">
                 <div class="mc4-right-text-section">
-                  <div class="heading">
+                  <div class="heading" aria-level="2">
                     <span>Now and Then</span>
                   </div>
                   <div class="short-text">
@@ -277,13 +275,17 @@
         </div>
 
       </div>
-
     </body>
 
     <footer>
+      <div class="footer left">
+        <span>&copy; 2016 Colmar Academy. All rights reserved.</span>
+      </div>
 
+      <nav class="footer right">
+          <a href="#">Terms</a>
+          <a class="privacy" href="#">Privacy</a>
+      </nav>
     </footer>
-
-  </body>
 
 </html>
