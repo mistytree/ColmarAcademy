@@ -1,16 +1,17 @@
 html {
   font-size: 16px;
   font-family: "Chivo", sans-serif;
+  background-color: #efefef;  /* Very light grey */
 }
 
-/* "Start Here" button in top .body-container.top */
+/* Button in 1st Main Container (see '.mc1-right bottom' class) */
 .button {
-  background: #006f6f;
-  background-image: -webkit-linear-gradient(top, #006f6f, #1b9a9a);
-  background-image: -moz-linear-gradient(top, #006f6f, #1b9a9a);
-  background-image: -ms-linear-gradient(top, #006f6f, #1b9a9a);
-  background-image: -o-linear-gradient(top, #006f6f, #1b9a9a);
-  background-image: linear-gradient(to bottom, #006f6f, #1b9a9a);
+  background: #058383;
+  background-image: -webkit-linear-gradient(top, #058383, #37a6a6);
+  background-image: -moz-linear-gradient(top, #058383, #37a6a6);
+  background-image: -ms-linear-gradient(top, #058383, #37a6a6);
+  background-image: -o-linear-gradient(top, #058383, #37a6a6);
+  background-image: linear-gradient(to bottom, #058383, #37a6a6);
   -webkit-border-radius: 60;
   -moz-border-radius: 60;
   border-radius: 60px;
@@ -18,19 +19,19 @@ html {
   -moz-box-shadow: 2px 2px 4px #666666;
   box-shadow: 2px 2px 4px #666666;
   font-family: Arial;
-  color: #ffffff;
+  color: #fff;
   font-size: 1.25rem;
   padding: 0.625rem 1.25rem;
   text-decoration: none;
 }
 
 .button:hover {
-  background: #008b8b;
-  background-image: -webkit-linear-gradient(top, #008b8b, #3caaaa);
-  background-image: -moz-linear-gradient(top, #008b8b, #3caaaa);
-  background-image: -ms-linear-gradient(top, #008b8b, #3caaaa);
-  background-image: -o-linear-gradient(top, #008b8b, #3caaaa);
-  background-image: linear-gradient(to bottom, #008b8b, #3caaaa);
+  background: #1b9696;
+  background-image: -webkit-linear-gradient(top, #1b9696, #5fc1c1);
+  background-image: -moz-linear-gradient(top, #1b9696, #5fc1c1);
+  background-image: -ms-linear-gradient(top, #1b9696, #5fc1c1);
+  background-image: -o-linear-gradient(top, #1b9696, #5fc1c1);
+  background-image: linear-gradient(to bottom, #1b9696, #5fc1c1);
   text-decoration: none;
 }
 
@@ -39,9 +40,9 @@ html {
 .header-container {
   height: 4rem;
   width: 100%;
-  /*white-space: nowrap;*/
-  text-align: center;  /* Center align nav-bar text when wrapped during resizing */
-  background-color: #008b8b;
+  /* white-space: nowrap; */
+  text-align: center;  /* Center align nav-bar text when wrapped in two lines during resizing */
+  background-color: #1b9696;*/
 
   display: block;
   position: fixed;
@@ -86,11 +87,13 @@ html {
 header nav {
   font-size: 1.125rem;
   font-weight: bolder;
-  letter-spacing: -0.06rem;  /* To fit nav-bar text fully before switched to mobile mode */
+  letter-spacing: -0.06rem;  /* To fit nav-bar text fully before switching to mobile mode */
+
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
+
   padding-right: 1.5rem;
   padding-left: 1.5rem;  /* Keep gap between left and right side of header 1.5 + 0.5rem (32px) minimum */
 }
@@ -104,25 +107,34 @@ header nav a {
 
 header nav a:hover {
   font-size: 1.25rem;
-  filter: drop-shadow(0 0 0.75rem #FFFFE0);
+  filter: drop-shadow(0 0 0.75rem #ffffe0);
+}
+
+header span {  /* Separating nav-bar items with vertical bar character */
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 /* BODY Section */
 .body-container {
   width: 100%;
   margin-top: 5.5rem;  /* 1.5rem under header */
-  position: absolute;
+  position: absolute;  /* In relation to fixed header */
   z-index: 1;
 
   display: flex;
   flex-flow: column;
-
-  /* !!! FUCKED UP PART!!!
   align-items: center;
+}
 
-  margin-left: auto;
-  margin-right: auto;
-*/
+/* Important!!! Switches TO 'align-items: flex-start' FROM 'align-items: center' at 68rem */
+/* to prevent <body> content disappearing on the left when resizing (narrowing screen/browser) */
+@media only screen and (max-width: 68rem) {
+  .body-container {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
 }
 
 .main-cont-1st img,
@@ -139,14 +151,14 @@ header nav a:hover {
   width: 64rem;   /* Corresponds to 1,024px width */
   margin: 0 1.5rem 1.5rem 1.5rem;
 
-  background-color: rgba(60, 170, 170, 0.2); /* hex #3CAAAA */
+  background-color: rgba(95, 193, 193, 0.18); /* hex #5fc1c1 */
   display: flex;
   flex-flow: row;
   justify-content: space-between;
 }
 
-.main-cont-1st img {
-  padding: 1.5rem;  /* Used the same padding around; not as in mock-up */
+.main-cont-1st img {  /* Image width is 600px or ~60% of container width */
+  padding: 1.5rem;    /* Used the same padding around; not as in mock-up */
 }
 
 .main-cont-1st-right {
@@ -156,14 +168,13 @@ header nav a:hover {
   align-items: flex-start;
 
   padding-right: 1.5rem;
-  /*min-width: 19.2rem; /* not narrower than 40% of 768px (tablet width in portrait) */
 }
 
 .mc1-right.top,
 .mc2-left.headline,
 .main-cont-3rd-header,
 .main-cont-4th-header {
-  font-size: 2rem;
+  font-size: 2rem;  /* Main headline font size */
   font-weight: 900;
   padding-bottom: 1.5rem;
 }
@@ -196,7 +207,7 @@ header nav a:hover {
 }
 
 .main-cont-2nd a {
-  color: #005757;
+  color: #006666;
   text-decoration: underline;
 }
 
@@ -238,7 +249,7 @@ header nav a:hover {
 }
 
 .mc2-right-text-section {
-  padding-bottom: 1.5rem; /* Centering text; cancelling out bottom padding for '.mc2-right.top img' */
+  padding-bottom: 1.5rem; /* Centering text vertically; cancelling out bottom padding for '.mc2-right.top img' */
 }
 
 .main-cont-2nd .heading,
@@ -276,7 +287,7 @@ header nav a:hover {
 
 .mc3-1r-middle,
 .mc3-2r-middle {
-  margin: 0 2rem;
+  margin: 0 2rem; /* Separating containers horizontally apart with 2rem margin */
 }
 
 .main-cont-3rd-header,
@@ -303,8 +314,8 @@ header nav a:hover {
 .mc3-2r-left,
 .mc3-2r-middle,
 .mc3-2r-right {
-  width: 15.625rem;
-  height: 16.5rem;
+  width: 15.625rem;  /* 250px width of small container in 'Start Learning' section */
+  height: 16.5rem;  /* 264px */
   background-color: #fff;
   filter: drop-shadow(8px 8px 10px darkslategray);
   transition: background-color 1s;
@@ -316,20 +327,20 @@ header nav a:hover {
 .mc3-2r-left:hover,
 .mc3-2r-middle:hover,
 .mc3-2r-right:hover {
-  background-color: #FFFFE0;
+  background-color: #ffffe0;
 }
 
 /* 4th (from top) Main Container */
 .main-cont-4th {
   display: flex;
-  flex-flow: column;
+  flex-flow: column;  /* 'Thesis Exhibit' headline & remaining content */
   justify-content: center;
   align-items: center;
 }
 
 .main-cont-4th-body {
   display: flex;
-  flex-flow: row;
+  flex-flow: row;  /* Left video part & right photos part */
   justify-content: center;
   align-items: flex-start;
 }
@@ -375,12 +386,25 @@ video {
   align-items: center;
 }
 
+/* WORKAROUND for FOOTER in desktop mode: Not the best solution, but works! */
+/* Forcing footer background to expand wider than just browser width when horizontal scrolls appear */
+/* Reason: when scrolling right, footer background would be just screen wide not matching <body> width */
+.footer-background {
+  width: 100%;
+  height: 4rem;
+  min-width: 67rem; /*  width (1,072px) = main container (64rem) + 2x 1.5rem margin*/
+  background-color: #1b9696;
+}
+
 /* Footer */
 footer {
   width: 100%;
   height: 4rem;
-  background-color: #008b8b;
+  background-color: #1b9696;  /* Keep it for mobile mode! */
   white-space: nowrap;
+
+  position: absolute;
+  bottom: 0px;
 
   display: flex;
   flex-flow: row;
@@ -397,7 +421,7 @@ footer {
 }
 
 .footer.right span {
-  width: 1.5rem;
+  width: 1.5rem;  /* Separating footer nav-bar items with 1.5rem spacing */
 }
 
 .privacy {
@@ -413,9 +437,9 @@ footer nav a:hover {
   filter: drop-shadow(0 0 0.75rem #fff);
 }
 
-/* Responsive Design for Mobile (< 768px) */
+/* Responsive Design for Mobile (< 768px/48rem) */
 /* Optimized for Landscape 480px Mode */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 48rem) {
 
   /* Fonts (reduced to 85% size)*/
   footer {
@@ -463,8 +487,9 @@ footer nav a:hover {
 
   /* Body Container */
   .body-container {
-    width:100%;  /* Corresponds to 768px */
+    width: 100%;  /* Corresponds to 768px */
     margin-top: 4rem;
+    padding-bottom: 2.75rem;  /* Adjusts (moves up) for width of footer set to 'position: absolute' */
     align-items: flex-start;
   }
 
@@ -474,9 +499,9 @@ footer nav a:hover {
   .main-cont-3rd,
   .main-cont-4th{
     width: 100%;
-    min-width: 30rem;
+    min-width: 30rem;  /* 480px */
     border-bottom: 0.0625rem solid #000;
-    background-color: rgba(60, 170, 170, 0.2);
+    background-color: rgba(95, 193, 193, 0.18);
     margin: 0;
 
     display: flex;
@@ -486,9 +511,9 @@ footer nav a:hover {
   }
 
   .main-cont-1st img {
-    width: 30rem;  /* Corresponds to 480px */
+    width: 30rem;  /* 480px */
     height: auto;
-    padding: 0 0 1.5rem 0;
+    padding: 1.5rem 0 1.5rem 0; /* Like more with 'padding-top' at 1.5rem (readline says 0rem) */
   }
 
   .main-cont-1st-right {
@@ -522,7 +547,7 @@ footer nav a:hover {
 
   .mc2-img-mobile {
     display: block;
-    width: 27rem;
+    width: 27rem; /* 432px */
     height: auto;
     padding-bottom: 1rem;
   }
@@ -560,7 +585,8 @@ footer nav a:hover {
     padding-top: 1rem;
     margin-bottom: 0.5rem;
 
-    background-color: #008b8b;
+    background-color: #1b9696;
+    border: 0.25rem outset #1b9696;  /* Creating '3D' button effect */
     text-align: left;
   }
 
@@ -598,7 +624,8 @@ footer nav a:hover {
   }
 
   /* Footer */
-  .footer.right {
+  .footer.right,
+  .footer-background {
     display: none;
   }
 
